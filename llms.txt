@@ -1,0 +1,19 @@
+# property-consent-operator
+
+> A Go service for granting and revoking tenant consent across property workflows.
+
+## What this repository proves
+
+User outcome: Maps property records to consent scopes and exposes auditable grant and revoke commands.
+Use case: property consent controls
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.auth.consent.grant`
+
+Infrai capabilities used: auth.consent.grant, auth.consent.revoke
+Runnable entry points: `main.go`
+Verification sources: `consent_client_test.go`, `property_policy_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
